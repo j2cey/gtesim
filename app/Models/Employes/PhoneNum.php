@@ -100,4 +100,14 @@ class PhoneNum extends BaseModel implements IHasEsim
 
         return $creator;
     }
+
+    public static function boot ()
+    {
+        parent::boot();
+
+        // juste avant suppression
+        self::deleting(function($model){
+            $model->dettachEsim();
+        });
+    }
 }

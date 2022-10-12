@@ -43,10 +43,11 @@ trait HasEsim
 
         $esim = $this->esim;
 
-        $this->esim()->dissociate();
+        if ($esim) {
+            $this->esim()->dissociate()->save();
 
-        $esim->setStatutFree();
-
+            $esim->setStatutFree();
+        }
         return $this;
     }
 

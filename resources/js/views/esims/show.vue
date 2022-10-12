@@ -181,7 +181,7 @@
 
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-xs">
-                                <span v-if="can('esimstate-list')" class="text text-align-left">Etats(Historique)</span>
+                                <span v-if="can('esimstate-list')" class="text text-align-left">Etats (Historique)</span>
                                 <span class="text text-align-right">
 
                                 </span>
